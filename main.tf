@@ -2,7 +2,8 @@
 ## Tagging Module – Applies standard tags to all resources
 ##-----------------------------------------------------------------------------
 module "labels" {
-  source          = "github.com/terraform-az-modules/terraform-azure-tags?ref=feat/labels-update"
+  source          = "terraform-az-modules/tags/azure"
+  version         = "1.0.0"
   name            = var.custom_name == "" ? var.name : var.custom_name
   location        = var.location
   environment     = var.environment

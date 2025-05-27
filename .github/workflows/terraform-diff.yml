@@ -3,9 +3,6 @@ on:
   pull_request:
     branches:
       - master
-    paths:
-      - 'examples/complete/**'
-      - 'examples/vnet_with_existing_ddos_id/**'
 
 jobs:
   complete-example:

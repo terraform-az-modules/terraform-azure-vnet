@@ -1,6 +1,5 @@
 provider "azurerm" {
   features {}
-  # subscription_id = "000000-11111-1223-XXX-XXXXXXXXXXXX"
 }
 
 ##-----------------------------------------------------------------------------
@@ -8,8 +7,8 @@ provider "azurerm" {
 ## Resource group in which all resources will be deployed.
 ##-----------------------------------------------------------------------------
 module "resource_group" {
-  source      = "clouddrove/resource-group/azure"
-  version     = "1.0.2"
+  source      = "terraform-az-modules/resource-group/azure"
+  version     = "1.0.0"
   name        = "testrg"
   environment = "test"
   location    = "North Europe"

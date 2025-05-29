@@ -12,5 +12,5 @@ locals {
   ) : null
 
   create_ddos_plan = var.enable_ddos_pp && var.enable && var.existing_ddos_pp == null
-  name             = var.custom_name != "" ? var.custom_name : module.labels.id
+  name             = var.custom_name != null ? var.custom_name : module.labels.id
 }

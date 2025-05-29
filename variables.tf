@@ -55,7 +55,7 @@ variable "label_order" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/clouddrove-sandbox/azure-test-vnet.git"
+  default     = "https://github.com/terraform-az-modules/terraform-azure-vnet"
   description = "Terraform current module repo"
 
   validation {

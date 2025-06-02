@@ -122,7 +122,7 @@ variable "edge_zone" {
   description = " (Optional) Specifies the Edge Zone within the Azure Region where this Virtual Network should exist. Changing this forces a new Virtual Network to be created."
 }
 
-variable "enforcement" {
+variable "enable_encryption_settings" {
   type        = string
   default     = null
   description = "Specifies if the encrypted Virtual Network allows VM that does not support encryption. Possible values are DropUnencrypted and AllowUnencrypted."

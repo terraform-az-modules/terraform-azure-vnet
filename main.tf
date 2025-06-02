@@ -30,9 +30,9 @@ resource "azurerm_virtual_network" "vnet" {
   tags                    = module.labels.tags
 
   dynamic "encryption" {
-    for_each = var.enforcement != null ? [1] : []
+    for_each = var.enable_encryption_settings != null ? [1] : []
     content {
-      enforcement = var.enforcement
+      enforcement = var.enable_encryption_settings
     }
   }
 
@@ -57,7 +57,6 @@ resource "azurerm_network_ddos_protection_plan" "ddos_protection_plan" {
 
   lifecycle {
     prevent_destroy = false
-    ignore_changes  = [tags]
   }
 }
 

@@ -11,7 +11,7 @@ module "resource_group" {
   version     = "1.0.0"
   name        = "core"
   environment = "test"
-  location    = "North Europe"
+  location    = "northeurope"
   label_order = ["name", "environment", "location"]
 }
 
